@@ -45,8 +45,8 @@ server {
 > sudo nginx -t
 
 ## Upload website/webapp files to the remote server
-> windows: using winscp\
-> linux: using ssh scp command
+> **Windows**: using winscp [WinScp Download](https://winscp.net/eng/download.php)\
+> **Linux**: using ssh scp command ([Jenkins pipeline job](http://91.205.173.170:8080/job/JenkinsPipeline/pipeline-syntax/)/groovy script generator)
 
 # Creating a Systemd service file
 > sudo nano /lib/systemd/system/spedfit.service
