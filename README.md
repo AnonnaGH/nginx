@@ -84,7 +84,7 @@ WantedBy=multi-user.target
 ### Single domain registration
 > sudo certbot --nginx -d spedfit.com -d www.spedfit.com
 
-### Multiple domain at once
+### Multiple domain registration
 > sudo certbot --nginx -d spedfit.com -d www.spedfit.com
 
 ## To Test the certificate and SSL Configuration
