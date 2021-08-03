@@ -81,6 +81,10 @@ WantedBy=multi-user.target
 > sudo systemctl enable spedfit
 
 # Obtaining a certificate from letsencrypt.org
+### Single domain registration
+> sudo certbot --nginx -d spedfit.com -d www.spedfit.com
+
+### Multiple domain at once
 > sudo certbot --nginx -d spedfit.com -d www.spedfit.com
 
 ## To Test the certificate and SSL Configuration
