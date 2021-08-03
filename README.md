@@ -8,7 +8,7 @@
 > If you find the IP of the server from the search above, then you are ready to go to the next step.
 
 # Step-2: NGINX
-> Virtual Hosting using nginx
+### Virtual Hosting using nginx
 > `nano /etc/nginx/conf.d/spedfit.com.conf`
 
 ```
@@ -37,15 +37,15 @@ server {
 ![nginx_config_directory](./screenshots/nginx_config_directory.png)
 
 ## NGINX STATUS & RESTART
-> sudo systemctl status nginx
-> sudo systemctl reload nginx
+> sudo systemctl status nginx\
+> sudo systemctl reload nginx\
 > sudo systemctl restart nginx
 
 ## NGINX Configuration check
 > sudo nginx -t
 
 ## Upload website/webapp files to the remote server
-> windows: using winscp
+> windows: using winscp\
 > linux: using ssh scp command
 
 # Creating a Systemd service file
@@ -74,7 +74,7 @@ WantedBy=multi-user.target
 > sudo systemctl daemon-reload
 
 ## Check service status & Restart (just created)
-> sudo service spedfit status
+> sudo service spedfit status\
 > sudo service spedfit start
 
 ## Enable to start services automatically at boot
@@ -95,9 +95,9 @@ WantedBy=multi-user.target
 > sudo certbot renew --dry-run
 
 # Firewall open port & Reload
-> sudo firewall-cmd --list-ports
-> sudo firewall-cmd --permanent --add-port=8822/tcp
-> sudo firewall-cmd --reload
+> sudo firewall-cmd --list-ports\
+> sudo firewall-cmd --permanent --add-port=8822/tcp\
+> sudo firewall-cmd --reload\
 > sudo firewall-cmd --list-ports
 
 ## Set Execute permission to binary file
