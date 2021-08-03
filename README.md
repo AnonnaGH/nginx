@@ -48,7 +48,7 @@ server {
 > windows: using winscp
 > linux: using ssh scp command
 
-# Creating a Systemd Unit File
+# Creating a Systemd service file
 > sudo nano /lib/systemd/system/spedfit.service
 
 ```
@@ -70,7 +70,7 @@ WantedBy=multi-user.target
 ## Set permission
 > sudo chmod 664 /lib/systemd/system/spedfit.service
 
-## Reload system daemon
+## Reload systemd daemon
 > sudo systemctl daemon-reload
 
 ## Check service status & Restart (just created)
@@ -80,7 +80,7 @@ WantedBy=multi-user.target
 ## Enable to start services automatically at boot
 > sudo systemctl enable spedfit
 
-# Obtaining a certificate LETSENCRYPT.ORG
+# Obtaining a certificate from letsencrypt.org
 > sudo certbot --nginx -d spedfit.com -d www.spedfit.com
 
 ## To Test the certificate and SSL Configuration
