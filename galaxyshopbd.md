@@ -122,7 +122,8 @@ sql_mode= ""
 ```
 
 ## Check the server ip using curl
-> curl icanhazip.com
+> curl -4 https://icanhazip.com (Ipv4)\
+> curl -6 https://icanhazip.com (Ipv6)
 
 
 # Resources
