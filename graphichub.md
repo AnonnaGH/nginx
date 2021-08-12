@@ -29,6 +29,28 @@ ExecStart=/home/mastererp/graphichub.org/graphichub
 WantedBy=multi-user.target
 ```
 
+## Difference between Reload & Restart
+
+### RESTART: HARD RESET
+* service nginx stop
+* service nginx start
+
+### RELOAD: SOFT RESET
+* nginx -t
+ * if nginx-t is sucess
+  
+   > service nginx stop\
+   > service nginx start
+
+### Command to reload and restart nginx service
+> service nginx reload\
+> service nginx restart
+
+or it could be ...
+
+> systemctl reload nginx\
+> systemctl restart nginx
+
 ## Obtaining a SSL Certificate
 > sudo certbot --nginx -d graphichub.org -d www.graphichub.org
 
