@@ -26,19 +26,20 @@ server {
         server_name galaxyshopbd.com www.galaxyshopbd.com;
 	    #expires 1d;
 
-	location / {
+	    location / {
 
-          #proxy_cache my_cache;
-	      #proxy_buffering        on;
-	      #proxy_cache_valid      200  1d;
-	      #proxy_cache_use_stale  error timeout invalid_header updating
-          #http_500 http_502 http_503 http_504;
+            #proxy_cache my_cache;
+            #proxy_buffering        on;
+            #proxy_cache_valid      200  1d;
+            #proxy_cache_use_stale  error timeout invalid_header updating
+            #http_500 http_502 http_503 http_504;
 
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-Forwarded-Proto $scheme;
-          proxy_set_header X-Real-IP $remote_addr;
-	      proxy_set_header Host $host;
-          proxy_pass  http://127.0.0.1:8081;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header Host $host;
+            proxy_pass  http://127.0.0.1:8081;
+            
         }
 }
 ```
